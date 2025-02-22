@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Left section */
+.left {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+    text-align: left;
+    position: relative;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-family: "Single Day", cursive;
+    color: #72db73;
+    font-weight: bolder;
+}
+
+.subtitle {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bolder;
+}
+
+/* Selected genres */
+.selected {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.chips {
+    font-size: 1rem;
+    color: white;
+    background-color: #148A08;
+    border-radius: 12px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.remove {
+    color: gray;
+    cursor: pointer;
+}
+
+/* Right section */
+.right {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    /* Proper spacing */
+    padding-top: 5vh;
+    padding-left: 2vw;
+    /* Adjusted */
+}
+
+/* Cards */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vh;
+    border-radius: 10px;
+    height: 19.5vh;
+    width: 15vw;
+    gap: 2vh;
+    cursor: pointer;
+
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.cardImg {
+    width: 70%;
+    height: 60%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Submit Button */
+.submitBtn {
+    background-color: #148A08;
+    color: white;
+    width: 12vw;
+    height: 3vw;
+    border-radius: 17px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+    text-align: center;
+    position: relative;
+    left: 39vw;
+    font-weight: bolder;
+    ;
+}
+
+/* ✅ Responsive Design */
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left {
+        width: 100%;
+        align-items: center;
+    }
+
+    .right {
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding-left: 0;
+    }
+
+    .card {
+        width: 40vw;
+        height: 22vh;
+        padding: 1rem;
+    }
+
+    .submitBtn {
+        width: 90%;
+        /* Instead of 100%, to avoid overflow */
+        height: 45px;
+        max-width: 400px;
+        /* Optional: Limits button width */
+        margin: 2rem auto;
+        /* Ensures centering */
+        left: auto;
+        /* Reset left alignment */
+        transform: none;
+        /* Remove unwanted shifts */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .subtitle {
+        font-size: 1.8rem;
+    }
+
+    .right {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+
+    .card {
+        width: 42vw;
+        height: 20vh;
+    }
+
+    .submitBtn {
+        width: 50%;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .right {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        height: auto;
+    }
+
+    .submitBtn {
+        width: 80%;
+        height: 55px;
+        position: relative;
+        bottom: 0;
+        left: auto;
+        transform: none;
+    }
+
+    .selected {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 1024px) and (min-height: 1366px) {
+    .card {
+
+        height: 10vh;
+    }
+}

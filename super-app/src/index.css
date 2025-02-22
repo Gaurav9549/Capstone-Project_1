@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 3vh;
+  gap: 1vh;
+  width: 40vw;
+  margin-top: 3vh;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+form input[type="text"] {
+  border: none;
+  background-color: #292929;
+  padding: 1rem;
+  width: 70%;
+  border-radius: 10px;
+}
+
+form input[type="text"]:focus {
+  outline: none;
+  border: 1px solid #72DB73;
+}
+
+.login-form {
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+  }
+
+  .login-poster {
+    display: none;
+  }
+
+  .login-form {
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+  }
+}
